@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Exia Community</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+ 
+
+
+	</head>
+
+	<body class="landing">
+	<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Exia Community</a></h1>
+						<button id="fs" style="margin-left:42%" onclick="">Mode Théatre</button>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Accueil</a></li>
+											<li><a href="news.html">Actualités</a></li>
+											<li><a href="staff.html">Staff</a></li>
+											<li><a href="stream.html">Stream</a></li>
+											<li style="display:none"><a href="#">Sign Up</a></li>
+											<li style="display:none"><a href="#">Log In</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+					<section id="one" style="padding-top:50px;background-color:transparent;" class="wrapper alt style2">
+						<section class="spotlight">
+							<div class="content">
+								<h2>Retrouvez nous sur Twitch<br /></h2>
+								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								
+							</div>
+						</section>
+					</section>					
+
+					<div class="iframe-responsive-wrapper">
+						<iframe id="stream" src="https://player.twitch.tv/?channel=exiacommunity" webkitAllowFullScreen mozallowfullscreen allowFullScreen frameborder="0" scrolling="no" height="400" width="700"></iframe>
+						<iframe id ="chat" src="https://www.twitch.tv/exiacommunity/chat?popout=" frameborder="0" scrolling="no" height="500" width="350"></iframe>
+					</div>
+
+					<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>Copyright ExiaCommunity &copy;2016</li><li><a href="#">Reporter un bug</a></li>
+							<p>Design & code : Paul BOOGAERTS, Jean-Clément PODEVIN, Quentin DEHOUCK, Quentin PORION.</p>
+						</ul>
+					</footer>
+			</div>
+	<!-- Scripts -->
+			<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+			<script type="text/javascript" src="assets/js/jquery.scrollex.min.js"></script>
+			<script type="text/javascript" src="assets/js/jquery.scrolly.min.js"></script>
+			<script type="text/javascript" src="assets/js/skel.min.js"></script>
+			<script type="text/javascript" src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script type="text/javascript" src="assets/js/main.js"></script>
+			<script type="text/javascript" src="assets/js/jssor.slider.mini.js"></script>
+			<script type="text/javascript">
+				function fullscreen () {
+					if($(".iframe-responsive-wrapper").css("position") == "relative") {
+						$(".iframe-responsive-wrapper").css("position","fixed");
+						$(".iframe-responsive-wrapper").css("min-height","93%");
+						$(".iframe-responsive-wrapper").css("min-width","100%");
+						$(".iframe-responsive-wrapper").css("top","50px");
+						$(".iframe-responsive-wrapper").css("left","0");
+						$("#fs").html("Mode Normal");
+						$("#footer").hide();
+					}
+					else {
+						$(".iframe-responsive-wrapper").css("position","relative");
+						$(".iframe-responsive-wrapper").css("min-height","500px");
+						$(".iframe-responsive-wrapper").css("min-width","0");
+						$(".iframe-responsive-wrapper").css("top","0");
+						$(".iframe-responsive-wrapper").css("left","0");
+						$("#fs").html("Mode Théatre");
+						$("#footer").show();
+					}
+				}
+
+				$(document).ready(function() {
+					$("#fs").attr("onclick","fullscreen()");
+				});
+			</script>
+	</body>
+</html>

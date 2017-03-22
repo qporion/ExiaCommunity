@@ -1,0 +1,2 @@
+curl -H 'Accept: application/vnd.twitchtv.v3+json' -H 'Client-ID: ojc8866ltenas4oz7bgw7c5lgeq1qnn' -X GET https://api.twitch.tv/kraken/channels/exiacommunity/follows/?limit=100
+
